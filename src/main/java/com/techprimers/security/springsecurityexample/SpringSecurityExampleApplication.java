@@ -1,13 +1,13 @@
-package com.gpch.login;
+package com.techprimers.security.springsecurityexample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LoginApplication {
+public class SpringSecurityExampleApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LoginApplication.class, args);
+        SpringApplication.run(SpringSecurityExampleApplication.class, args);
     }
 
 }
