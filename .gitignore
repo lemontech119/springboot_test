@@ -2,3 +2,5 @@ typescript/node_modules
 
 pokeapi/node_modules
 pokeapi/.env
+
+python_shell/node_modules
