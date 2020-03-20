@@ -8,7 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "moment-timezone": "^0.5.28"
+  },
   "devDependencies": {
     "python-shell": "^1.0.8"
   }
