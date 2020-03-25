@@ -26,6 +26,13 @@ provider:
   stage: dev
   region: ap-northeast-2
 
+plugins:
+  - serverless-offline
+
+custom: 
+  serverless-offline:
+    httpPort: 4000
+
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
@@ -66,6 +73,36 @@ functions:
       - http:
           path: hello
           method: get
+  createStory:
+    handler: src/stories.createStory
+    events:
+      - http:
+          path: stories
+          method: post
+  readStories:
+    handler: src/stories.readStories
+    events:
+      - http:
+          path: stories
+          method: get
+  readStory:
+    handler: src/stories.readStory
+    events:
+      - http:
+          path: stories/{id}
+          method: get
+  updateStory:
+    handler: src/stories.updateStory
+    events:
+      - http:
+          path: stories/{id}
+          method: patch
+  deleteStory:
+    handler: src/stories.deleteStory
+    events:
+      - http: 
+          path: stories/{id}
+          method: delete
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
